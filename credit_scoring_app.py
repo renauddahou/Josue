@@ -84,8 +84,9 @@ def run():
 
   if streamlit.button("Predict"):
     resultat = return_prediction()
-    key, value = next((str(k), str(v)) for k, v in resultat.items())
-    streamlit.success("La classe prédite par le modèle est {}".format(value))
+    keys = "".join(list(resultat.keys()))
+    values = "".join(list(resultat.values()))
+    streamlit.success("La classe prédite par le modèle est {}".format(values))
     
 if __name__=='__main__':
     run()
