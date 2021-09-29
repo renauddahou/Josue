@@ -84,7 +84,6 @@ def run():
 
   if streamlit.button("Predict"):
     resultat = return_prediction()
-    import json
     result = json.dumps(resultat)
     streamlit.success("La classe prédite par le modèle est {}".format(result))
     
